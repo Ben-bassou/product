@@ -3,114 +3,1011 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Boutique E-Commerce - Saharaluxry Style</title>
+
+  <title>Morocco Heritage - Boutique Marocaine</title>
+
   <link rel="stylesheet" href="style.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <!-- Header -->
+  <!-- ================= HEADER ================= -->
+
   <header class="navbar">
-    <div class="logo">LUXURY STORE</div>
-    <nav class="nav-links">
-      <a href="#products">Produits</a>
-      <a href="#about">À Propos</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div class="cart-btn" onclick="toggleCart()">
-      🛒 Panier (<span id="cart-count">0</span>)
+
+    <div class="logo">
+      MOROCCO <span>HERITAGE</span>
     </div>
+
+    <nav class="nav-links">
+
+      <a href="#home">Accueil</a>
+
+      <a href="#products">Produits</a>
+
+      <a href="#categories">Catégories</a>
+
+      <a href="#about">À propos</a>
+
+      <a href="#gallery">Galerie</a>
+
+      <a href="#contact">Contact</a>
+
+    </nav>
+
+    <div class="cart-btn" onclick="toggleCart()">
+
+      🛒 Panier
+      (<span id="cart-count">0</span>)
+
+    </div>
+
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
+
+  <!-- ================= HERO ================= -->
+
+  <section id="home" class="hero">
+
     <div class="hero-content">
-      <h1>Découvrez nos Produits Exclusifs</h1>
-      <p>Une collection haut de gamme conçue pour votre style et votre confort.</p>
-      <a href="#products" class="btn-primary">Voir le Catalogue</a>
+
+      <span class="hero-badge">
+        AUTHENTIQUE • MAROCAIN • ARTISANAL
+      </span>
+
+      <h1>
+        Découvrez<br>
+        l'Authenticité du Maroc
+      </h1>
+
+      <p>
+        Une sélection de produits marocains authentiques,
+        inspirés par notre patrimoine, notre artisanat
+        et notre savoir-faire traditionnel.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#products" class="btn-primary">
+          Découvrir nos produits
+        </a>
+
+        <a href="https://wa.me/212600000000"
+           target="_blank"
+           class="btn-whatsapp">
+
+          WhatsApp
+
+        </a>
+
+      </div>
+
     </div>
+
   </section>
 
-  <!-- Product Catalog -->
+
+  <!-- ================= CATEGORIES ================= -->
+
+  <section id="categories" class="categories-section">
+
+    <div class="section-title">
+
+      <span>NOTRE COLLECTION</span>
+
+      <h2>Nos Catégories</h2>
+
+      <p>
+        Découvrez les trésors du savoir-faire marocain.
+      </p>
+
+    </div>
+
+
+    <div class="categories-grid">
+
+      <a href="#products"
+         class="category-card"
+         onclick="filterProducts('Terroir')">
+
+        <div class="category-icon">
+          🫒
+        </div>
+
+        <h3>Terroir</h3>
+
+        <p>
+          Huile d'argan, Amlou et produits naturels
+        </p>
+
+      </a>
+
+
+      <a href="#products"
+         class="category-card"
+         onclick="filterProducts('Beauté')">
+
+        <div class="category-icon">
+          🌿
+        </div>
+
+        <h3>Beauté</h3>
+
+        <p>
+          Ghassoul, savon noir et soins naturels
+        </p>
+
+      </a>
+
+
+      <a href="#products"
+         class="category-card"
+         onclick="filterProducts('Artisanat')">
+
+        <div class="category-icon">
+          🧺
+        </div>
+
+        <h3>Artisanat</h3>
+
+        <p>
+          Créations artisanales marocaines
+        </p>
+
+      </a>
+
+
+      <a href="#products"
+         class="category-card"
+         onclick="filterProducts('Mode')">
+
+        <div class="category-icon">
+          👗
+        </div>
+
+        <h3>Mode</h3>
+
+        <p>
+          Babouches, caftans et accessoires
+        </p>
+
+      </a>
+
+
+      <a href="#products"
+         class="category-card"
+         onclick="filterProducts('Maison')">
+
+        <div class="category-icon">
+          🏺
+        </div>
+
+        <h3>Maison</h3>
+
+        <p>
+          Décoration et objets traditionnels
+        </p>
+
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= PRODUCTS ================= -->
+
   <section id="products" class="products-section">
-    <h2>Nos Produits</h2>
+
+    <div class="section-title">
+
+      <span>NOTRE BOUTIQUE</span>
+
+      <h2>Nos Produits</h2>
+
+      <p>
+        Des produits sélectionnés avec soin.
+      </p>
+
+    </div>
+
+
+    <!-- FILTRES -->
+
+    <div class="filters">
+
+      <button onclick="filterProducts('Tous')">
+        Tous
+      </button>
+
+      <button onclick="filterProducts('Terroir')">
+        Terroir
+      </button>
+
+      <button onclick="filterProducts('Beauté')">
+        Beauté
+      </button>
+
+      <button onclick="filterProducts('Artisanat')">
+        Artisanat
+      </button>
+
+      <button onclick="filterProducts('Mode')">
+        Mode
+      </button>
+
+      <button onclick="filterProducts('Maison')">
+        Maison
+      </button>
+
+    </div>
+
+
+    <!-- RECHERCHE -->
+
+    <div class="search-container">
+
+      <input
+        type="text"
+        id="search"
+        placeholder="Rechercher un produit..."
+        onkeyup="searchProducts()"
+      >
+
+    </div>
+
+
+    <!-- GRILLE PRODUITS -->
+
     <div class="products-grid">
-      
-      <!-- Produit 1 -->
-      <div class="product-card">
+
+
+      <!-- PRODUIT 1 -->
+
+      <div class="product-card"
+           data-category="Terroir"
+           data-name="Huile d'Argan">
+
         <div class="img-container">
-          <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80" alt="Montre Elegance">
+
+          <span class="product-badge">
+            BEST SELLER
+          </span>
+
+          <img
+            src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=600&q=80"
+            alt="Huile d'Argan">
+
         </div>
+
         <div class="card-info">
-          <h3>Montre Luxe Édition</h3>
-          <p class="description">Finition premium en acier inoxydable et verre saphir.</p>
+
+          <span class="product-category">
+            TERROIR
+          </span>
+
+          <h3>
+            Huile d'Argan Premium
+          </h3>
+
+          <p class="description">
+            Huile d'argan marocaine naturelle,
+            pressée selon les méthodes traditionnelles.
+          </p>
+
           <div class="card-bottom">
-            <span class="price">149.99 €</span>
-            <button class="btn-add" onclick="addToCart('Montre Luxe Édition', 149.99)">Ajouter au panier</button>
+
+            <span class="price">
+              180 DH
+            </span>
+
+            <button
+              class="btn-add"
+              onclick="addToCart(
+                'Huile d\\'Argan Premium',
+                180
+              )">
+
+              Ajouter
+
+            </button>
+
           </div>
-          <a href="https://buy.stripe.com/demo" target="_blank" class="buy-link">Acheter Directement</a>
+
         </div>
+
       </div>
 
-      <!-- Produit 2 -->
-      <div class="product-card">
+
+      <!-- PRODUIT 2 -->
+
+      <div class="product-card"
+           data-category="Terroir"
+           data-name="Amlou">
+
         <div class="img-container">
-          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&q=80" alt="Casque Sans Fil">
+
+          <img
+            src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+            alt="Amlou Marocain">
+
         </div>
+
         <div class="card-info">
-          <h3>Casque Premium HD</h3>
-          <p class="description">Réduction de bruit active et autonomie de 40 heures.</p>
+
+          <span class="product-category">
+            TERROIR
+          </span>
+
+          <h3>
+            Amlou Traditionnel
+          </h3>
+
+          <p class="description">
+            Délicieuse préparation marocaine
+            aux amandes, miel et huile d'argan.
+          </p>
+
           <div class="card-bottom">
-            <span class="price">199.99 €</span>
-            <button class="btn-add" onclick="addToCart('Casque Premium HD', 199.99)">Ajouter au panier</button>
+
+            <span class="price">
+              95 DH
+            </span>
+
+            <button
+              class="btn-add"
+              onclick="addToCart(
+                'Amlou Traditionnel',
+                95
+              )">
+
+              Ajouter
+
+            </button>
+
           </div>
-          <a href="https://buy.stripe.com/demo" target="_blank" class="buy-link">Acheter Directement</a>
+
         </div>
+
       </div>
 
-      <!-- Produit 3 -->
-      <div class="product-card">
+
+      <!-- PRODUIT 3 -->
+
+      <div class="product-card"
+           data-category="Beauté"
+           data-name="Savon Noir">
+
         <div class="img-container">
-          <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&q=80" alt="Sac de Luxe">
+
+          <span class="product-badge">
+            NATUREL
+          </span>
+
+          <img
+            src="https://images.unsplash.com/photo-1607006344380-b6775a0824e7?w=600&q=80"
+            alt="Savon Noir">
+
         </div>
+
         <div class="card-info">
-          <h3>Sac Cuir Artisan</h3>
-          <p class="description">Cuir véritable cousu main, élégant et durable.</p>
+
+          <span class="product-category">
+            BEAUTÉ
+          </span>
+
+          <h3>
+            Savon Noir Marocain
+          </h3>
+
+          <p class="description">
+            Savon noir traditionnel à base
+            d'huile d'olive.
+          </p>
+
           <div class="card-bottom">
-            <span class="price">129.99 €</span>
-            <button class="btn-add" onclick="addToCart('Sac Cuir Artisan', 129.99)">Ajouter au panier</button>
+
+            <span class="price">
+              45 DH
+            </span>
+
+            <button
+              class="btn-add"
+              onclick="addToCart(
+                'Savon Noir Marocain',
+                45
+              )">
+
+              Ajouter
+
+            </button>
+
           </div>
-          <a href="https://buy.stripe.com/demo" target="_blank" class="buy-link">Acheter Directement</a>
+
         </div>
+
+      </div>
+
+
+      <!-- PRODUIT 4 -->
+
+      <div class="product-card"
+           data-category="Beauté"
+           data-name="Ghassoul">
+
+        <div class="img-container">
+
+          <img
+            src="https://images.unsplash.com/photo-1611080541599-8c6dbde6ed28?w=600&q=80"
+            alt="Ghassoul">
+
+        </div>
+
+        <div class="card-info">
+
+          <span class="product-category">
+            BEAUTÉ
+          </span>
+
+          <h3>
+            Ghassoul Naturel
+          </h3>
+
+          <p class="description">
+            Argile naturelle du Maroc utilisée
+            traditionnellement pour les soins.
+          </p>
+
+          <div class="card-bottom">
+
+            <span class="price">
+              55 DH
+            </span>
+
+            <button
+              class="btn-add"
+              onclick="addToCart(
+                'Ghassoul Naturel',
+                55
+              )">
+
+              Ajouter
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- PRODUIT 5 -->
+
+      <div class="product-card"
+           data-category="Artisanat"
+           data-name="Panier Marocain">
+
+        <div class="img-container">
+
+          <img
+            src="https://images.unsplash.com/photo-1594736797933-d0c2f0f1b5d7?w=600&q=80"
+            alt="Panier Marocain">
+
+        </div>
+
+        <div class="card-info">
+
+          <span class="product-category">
+            ARTISANAT
+          </span>
+
+          <h3>
+            Panier Artisanal
+          </h3>
+
+          <p class="description">
+            Panier tressé à la main par
+            des artisans marocains.
+          </p>
+
+          <div class="card-bottom">
+
+            <span class="price">
+              120 DH
+            </span>
+
+            <button
+              class="btn-add"
+              onclick="addToCart(
+                'Panier Artisanal',
+                120
+              )">
+
+              Ajouter
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- PRODUIT 6 -->
+
+      <div class="product-card"
+           data-category="Maison"
+           data-name="Tapis Marocain">
+
+        <div class="img-container">
+
+          <span class="product-badge">
+            PREMIUM
+          </span>
+
+          <img
+            src="https://images.unsplash.com/photo-1600166898405-da9535204843?w=600&q=80"
+            alt="Tapis Marocain">
+
+        </div>
+
+        <div class="card-info">
+
+          <span class="product-category">
+            MAISON
+          </span>
+
+          <h3>
+            Tapis Marocain
+          </h3>
+
+          <p class="description">
+            Tapis traditionnel inspiré
+            des motifs berbères.
+          </p>
+
+          <div class="card-bottom">
+
+            <span class="price">
+              850 DH
+            </span>
+
+            <button
+              class="btn-add"
+              onclick="addToCart(
+                'Tapis Marocain',
+                850
+              )">
+
+              Ajouter
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- PRODUIT 7 -->
+
+      <div class="product-card"
+           data-category="Mode"
+           data-name="Babouche Marocaine">
+
+        <div class="img-container">
+
+          <img
+            src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=600&q=80"
+            alt="Babouche Marocaine">
+
+        </div>
+
+        <div class="card-info">
+
+          <span class="product-category">
+            MODE
+          </span>
+
+          <h3>
+            Babouche Marocaine
+          </h3>
+
+          <p class="description">
+            Babouche traditionnelle en cuir
+            avec finition artisanale.
+          </p>
+
+          <div class="card-bottom">
+
+            <span class="price">
+              220 DH
+            </span>
+
+            <button
+              class="btn-add"
+              onclick="addToCart(
+                'Babouche Marocaine',
+                220
+              )">
+
+              Ajouter
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- PRODUIT 8 -->
+
+      <div class="product-card"
+           data-category="Maison"
+           data-name="Coussin Berbère">
+
+        <div class="img-container">
+
+          <img
+            src="https://images.unsplash.com/photo-1618220179428-22790b461013?w=600&q=80"
+            alt="Coussin Berbère">
+
+        </div>
+
+        <div class="card-info">
+
+          <span class="product-category">
+            MAISON
+          </span>
+
+          <h3>
+            Coussin Berbère
+          </h3>
+
+          <p class="description">
+            Coussin décoratif inspiré
+            de l'art berbère marocain.
+          </p>
+
+          <div class="card-bottom">
+
+            <span class="price">
+              190 DH
+            </span>
+
+            <button
+              class="btn-add"
+              onclick="addToCart(
+                'Coussin Berbère',
+                190
+              )">
+
+              Ajouter
+
+            </button>
+
+          </div>
+
+        </div>
+
       </div>
 
     </div>
+
   </section>
 
-  <!-- Panier Modal / Sidebar -->
-  <div id="cart-modal" class="cart-modal">
-    <div class="cart-content">
-      <div class="cart-header">
-        <h3>Votre Panier</h3>
-        <span class="close-btn" onclick="toggleCart()">&times;</span>
-      </div>
-      <div id="cart-items" class="cart-items">
-        <p class="empty-msg">Votre panier est vide.</p>
-      </div>
-      <div class="cart-footer">
-        <div class="total">Total : <span id="cart-total">0.00</span> €</div>
-        <button class="btn-checkout" onclick="checkout()">Procéder au paiement</button>
-      </div>
+
+  <!-- ================= ABOUT ================= -->
+
+  <section id="about" class="about-section">
+
+    <div class="about-image">
+
+      <img
+        src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?w=900&q=80"
+        alt="Maroc">
+
     </div>
+
+    <div class="about-content">
+
+      <span>NOTRE HISTOIRE</span>
+
+      <h2>
+        L'authenticité du Maroc
+      </h2>
+
+      <p>
+        Morocco Heritage met à l'honneur
+        les produits et le savoir-faire
+        marocains.
+      </p>
+
+      <p>
+        Notre objectif est de vous faire
+        découvrir une sélection de produits
+        authentiques issus de différentes
+        régions du Maroc.
+      </p>
+
+      <div class="features">
+
+        <div>
+          🇲🇦
+          <strong>
+            Produits marocains
+          </strong>
+        </div>
+
+        <div>
+          ✨
+          <strong>
+            Qualité sélectionnée
+          </strong>
+        </div>
+
+        <div>
+          📦
+          <strong>
+            Livraison au Maroc
+          </strong>
+        </div>
+
+        <div>
+          💬
+          <strong>
+            Service WhatsApp
+          </strong>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= GALLERY ================= -->
+
+  <section id="gallery" class="gallery-section">
+
+    <div class="section-title">
+
+      <span>NOTRE UNIVERS</span>
+
+      <h2>
+        Galerie
+      </h2>
+
+    </div>
+
+    <div class="gallery-grid">
+
+      <img
+        src="https://images.unsplash.com/photo-1489493585363-d69421e0edd3?w=700&q=80"
+        alt="Artisanat marocain">
+
+      <img
+        src="https://images.unsplash.com/photo-1548013146-72479768bada?w=700&q=80"
+        alt="Maroc">
+
+      <img
+        src="https://images.unsplash.com/photo-1534351590666-13e3e96b5017?w=700&q=80"
+        alt="Architecture marocaine">
+
+      <img
+        src="https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?w=700&q=80"
+        alt="Artisanat">
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= CONTACT ================= -->
+
+  <section id="contact" class="contact-section">
+
+    <div class="contact-content">
+
+      <span>
+        CONTACTEZ-NOUS
+      </span>
+
+      <h2>
+        Une question ?
+      </h2>
+
+      <p>
+        Notre équipe est à votre disposition
+        pour vous accompagner.
+      </p>
+
+      <div class="contact-info">
+
+        <p>
+          📱 WhatsApp :
+          +212 6 00 00 00 00
+        </p>
+
+        <p>
+          ☎️ Téléphone :
+          +212 5 00 00 00 00
+        </p>
+
+        <p>
+          ✉️ Email :
+          contact@moroccoheritage.ma
+        </p>
+
+        <p>
+          📍 Maroc
+        </p>
+
+      </div>
+
+      <a
+        href="https://wa.me/212600000000"
+        target="_blank"
+        class="btn-whatsapp">
+
+        💬 Nous contacter sur WhatsApp
+
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= CART ================= -->
+
+  <div id="cart-modal" class="cart-modal">
+
+    <div class="cart-content">
+
+      <div class="cart-header">
+
+        <h3>
+          Votre Panier
+        </h3>
+
+        <span
+          class="close-btn"
+          onclick="toggleCart()">
+
+          &times;
+
+        </span>
+
+      </div>
+
+
+      <div
+        id="cart-items"
+        class="cart-items">
+
+        <p class="empty-msg">
+          Votre panier est vide.
+        </p>
+
+      </div>
+
+
+      <div class="cart-footer">
+
+        <div class="total">
+
+          Total :
+
+          <span id="cart-total">
+            0.00 DH
+          </span>
+
+        </div>
+
+
+        <button
+          class="btn-checkout"
+          onclick="checkout()">
+
+          Commander sur WhatsApp
+
+        </button>
+
+      </div>
+
+    </div>
+
   </div>
 
-  <!-- Footer -->
+
+  <!-- ================= FOOTER ================= -->
+
   <footer>
-    <p>&copy; 2026 Luxury Store - Tous droits réservés.</p>
+
+    <div class="footer-content">
+
+      <div>
+
+        <div class="logo">
+          MOROCCO <span>HERITAGE</span>
+        </div>
+
+        <p>
+          L'authenticité du Maroc chez vous.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Navigation
+        </h4>
+
+        <a href="#home">
+          Accueil
+        </a>
+
+        <a href="#products">
+          Produits
+        </a>
+
+        <a href="#about">
+          À propos
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Contact
+        </h4>
+
+        <p>
+          +212 6 00 00 00 00
+        </p>
+
+        <p>
+          contact@moroccoheritage.ma
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+      © 2026 Morocco Heritage -
+      Tous droits réservés.
+
+    </div>
+
   </footer>
 
+
+  <!-- ================= JAVASCRIPT ================= -->
+
   <script src="script.js"></script>
+
 </body>
 </html>
